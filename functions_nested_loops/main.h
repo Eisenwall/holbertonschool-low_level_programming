@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int _putchar(char n);
-int print_last_digit(int);
+int jack_bauer(void);
 
 #endif
