@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int _putchar(char n);
-void print_to_98(int, n);
+void print_to_98(int n);
 
 #endif
