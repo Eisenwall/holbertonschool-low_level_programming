@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+/**
+ * main - prints the lowercase alphabet in reverse
+ *
+ * Return: 0
+ */
+int main(void)
+{
+    char c;
+    for (c = '1'; c <= '9'; c ++)
+        putchar(c);
+    for (c = 'a'; c <='f'; c++)
+        putchar(c);
+    putchar('\n');
+
+    return (0);
+}
