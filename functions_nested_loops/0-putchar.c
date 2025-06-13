@@ -1,15 +1,13 @@
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 /**
- * main - prints the lowercase alphabet in reverse
+ * main - prints _putchar followed by a new line
  *
  * Return: 0
  */
 int main(void)
 {
-    char str[] = "_putchtar\n";
+    char str[] = "_putchar\n";
     int i = 0;
 
     while (str[i] != '\0')
