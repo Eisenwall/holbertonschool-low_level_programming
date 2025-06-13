@@ -1,10 +1,20 @@
 #include <stdio.h>
 
-int main(void) {
-    char c;
+/**
+ * main - prints the alphabet in lowercase followed by a new line
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    char c = 'a';
 
-    for (c = 'a'; c <= 'z'; c++)
+    while (c <= 'z')
+    {
         putchar(c);
+        c++;
+    }
     putchar('\n');
-    return 0;
+
+    return (0);
 }
