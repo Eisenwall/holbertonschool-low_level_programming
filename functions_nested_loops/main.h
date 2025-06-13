@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int _putchar(char n);
-void add(int, int);
+int add(int, int);
 
 #endif
