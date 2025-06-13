@@ -1,17 +1,19 @@
 #include <stdio.h>
 
+/**
+ * main - Prints the alphabet in lowercase, then in uppercase.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	char c;
 
-	/* печать нижнего регистра */
 	for (c = 'a'; c <= 'z'; c++)
 		putchar(c);
-
-	/* печать верхнего регистра */
 	for (c = 'A'; c <= 'Z'; c++)
 		putchar(c);
-
 	putchar('\n');
+
 	return (0);
 }
