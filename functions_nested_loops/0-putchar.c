@@ -1,19 +1,22 @@
 #include <unistd.h>
 
 /**
- * main - prints _putchar followed by a new line
+ * main - prints _putchar
  *
- * Return: 0 on success
+ * Return: 0
  */
 int main(void)
 {
-    char str[] = "_putchar\n";
-    int i = 0;
+	int i;
+	char str[] = "_putchar\n";
 
-    while (str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
-    return (0);
+	i = 0;
+
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+
+	return (0);
 }
