@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _islower(int c);
-void islower(void);
+int _putchar(char c);
+void _islower(void);
 
 #endif /* MAIN_H */
