@@ -1,22 +1,25 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 
 /**
- * main - prints the lowercase alphabet in reverse
+ * main - prints all single digit numbers of base 10
+ * separated by ", " and ends with newline
  *
  * Return: 0
  */
 int main(void)
 {
-    int c;
-    for (c = 0; c <= 9; c++){
-        putchar('0' + c);
-        if (c != 9){
+    int i;
+
+    for (i = 0; i <= 9; i++)
+    {
+        putchar('0' + i); // вывод цифры
+        if (i != 9) // только если не последняя цифра
+        {
             putchar(',');
             putchar(' ');
         }
     }
+
     putchar('\n');
     return (0);
 }
