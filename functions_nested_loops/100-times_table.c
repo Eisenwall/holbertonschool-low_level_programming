@@ -18,7 +18,7 @@ void print_times_table(int n)
             product = i * j;
 
             if (j == 0)
-                _putchar('0' + product);  // print first number without spaces
+                _putchar('0' + product);  /* print first number without spaces */
             else
             {
                 _putchar(',');
