@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Description: Prints all possible different combinations of two digits.
+ * Numbers must be different and printed in ascending order.
+ * Only the smallest combination of two digits is printed.
+ * Uses putchar and no char variables.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int i, j;
