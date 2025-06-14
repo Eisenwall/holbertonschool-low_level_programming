@@ -18,12 +18,22 @@ void print_times_table(int n)
             product = i * j;
 
             if (j == 0)
-                _putchar('0' + product);  /* print first number without spaces */
+            {
+                /* print first number without leading spaces or comma */
+                if (product >= 10)
+                {
+                    _putchar('0' + product / 10);
+                    _putchar('0' + product % 10);
+                }
+                else
+                    _putchar('0' + product);
+            }
             else
             {
                 _putchar(',');
                 _putchar(' ');
 
+                /* print spaces to align numbers to width 3 */
                 if (product < 10)
                 {
                     _putchar(' ');
@@ -36,7 +46,7 @@ void print_times_table(int n)
                     _putchar('0' + product / 10);
                     _putchar('0' + product % 10);
                 }
-                else
+                else /* product >= 100 */
                 {
                     _putchar('0' + product / 100);
                     _putchar('0' + (product / 10) % 10);
@@ -47,3 +57,4 @@ void print_times_table(int n)
         _putchar('\n');
     }
 }
+
