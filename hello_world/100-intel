@@ -1,0 +1,8 @@
+#!/bin/bash
+# Assume $CFILE contains the C source filename
+
+# Replace .c extension with .s for output filename
+ASMFILE="${CFILE%.c}.s"
+
+# Generate assembly code in Intel syntax and save to ASMFILE
+gcc -S -masm=intel "$CFILE" -o "$ASMFILE"
