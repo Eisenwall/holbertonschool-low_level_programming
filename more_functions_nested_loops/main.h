@@ -1,7 +1,7 @@
-#include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
 
-int main(void)
-{
-    print_most_numbers();
-    return (0);
-}
+int _putchar(char c);
+void print_most_numbers(void);
+
+#endif /* MAIN_H */
