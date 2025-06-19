@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #include <unistd.h>
 /**
  * print_numbers - prints numbers from 0 to 9
@@ -17,7 +18,7 @@ void more_numbers(void)
             ones = (j % 10) + '0';
             if (j >= 10)
                 _putchar(tens);
-            puthcar(ones);
+            _puthcar(ones);
         }
         _putchar('\n');
     }
