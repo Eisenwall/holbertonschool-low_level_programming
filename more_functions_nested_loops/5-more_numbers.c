@@ -12,7 +12,7 @@ void more_numbers(void)
     char tens, ones;
     for (i = 0; i < 10; i++)
     {
-        for (j = 0; j <= 14; i++)
+        for (j = 0; j <= 14; j++)
         {
             tens = (j / 10) + '0';
             ones = (j % 10) + '0';
