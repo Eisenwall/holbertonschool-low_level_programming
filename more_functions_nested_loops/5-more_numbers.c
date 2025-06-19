@@ -18,7 +18,7 @@ void more_numbers(void)
             ones = (j % 10) + '0';
             if (j >= 10)
                 _putchar(tens);
-            _puthcar(ones);
+            _putchar(ones);
         }
         _putchar('\n');
     }
