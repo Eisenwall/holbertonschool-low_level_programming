@@ -6,14 +6,32 @@
  */
 void print_number(int n)
 {
+	int last_digit;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		if (n / 10 == 0) /* если это однозначное число типа -x */
+		{
+			_putchar('0' + (-n));
+			return;
+		}
+
+		last_digit = -(n % 10);
+		n = -(n / 10);
+	}
+	else
+	{
+		if (n / 10 == 0)
+		{
+			_putchar('0' + n);
+			return;
+		}
+
+		last_digit = n % 10;
+		n = n / 10;
 	}
 
-	if (n / 10 != 0)
-		print_number(n / 10);
-
-	_putchar((n % 10) + '0');
+	print_number(n);
+	_putchar('0' + last_digit);
 }
