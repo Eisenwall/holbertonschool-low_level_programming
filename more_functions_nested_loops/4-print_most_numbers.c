@@ -11,7 +11,7 @@ void print_most_numbers(void)
     for (i = 0; i <= 9; i++)
     {
         if (i != 2 && i != 4)
-            _putchar(i + '0');  // Первый вызов _putchar - вывод цифр
+            _putchar(i + '0');  /* Первый вызов _putchar - вывод цифр */
     }
-    _putchar('\n');           // Второй вызов _putchar - вывод новой строки
+    _putchar('\n');           /* Второй вызов _putchar - вывод новой строки */
 }
