@@ -1,4 +1,4 @@
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
     int i = 0, j = 0;
 
@@ -6,8 +6,8 @@ char *_strncat(char *dest, char *src, int n)
     while (dest[i] != '\0')
         i++;
 
-    /* Копировать не более n символов из src */
-    while (j < n && src[j] != '\0')
+    /* Копировать src в конец dest */
+    while (src[j] != '\0')
     {
         dest[i] = src[j];
         i++;
