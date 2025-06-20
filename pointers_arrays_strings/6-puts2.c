@@ -1,17 +1,17 @@
-#include "main.h"  
+#include "main.h"
+
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * puts2 - prints every other character of a string, starting with the first
+ * @str: string to print
  */
 void puts2(char *str)
 {
-    int r = 0;
+	int r = 0;
 
-    while (str[r] != '\0')
-    {
-        _putchar(str[r]);
-        r += 2;
-    }
-    _putchar('\n');
+	while (str[r] != '\0')
+	{
+		_putchar(str[r]);
+		r += 2;
+	}
+	_putchar('\n');
 }
