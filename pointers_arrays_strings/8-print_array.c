@@ -2,9 +2,12 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_array - prints n elements of an integer array
+ * @a: pointer to the first element of the array
+ * @n: number of elements to print
  *
- * Return: Always 0.
+ * Description: Prints the elements of the array separated by comma and space,
+ * followed by a new line.
  */
 void print_array(int *a, int n)
 {
