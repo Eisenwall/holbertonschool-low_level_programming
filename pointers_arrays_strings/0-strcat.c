@@ -1,23 +1,21 @@
-#include "main.h"
-#include <stdio.h>
-/**
- * _strcpy - copies the string pointed to by src including the null byte
- * @dest: pointer to the destination buffer
- * @src: pointer to the source string
- *
- * Return: pointer to dest
- */
 char *_strncat(char *dest, char *src, int n)
 {
-    int i = 0, a = 0;
-    while (dest[i] != '\n')
+    int i = 0, j = 0;
+
+    // Найти конец строки dest
+    while (dest[i] != '\0')
         i++;
-    while (src[j] != '\0')
+
+    // Копировать не более n символов из src
+    while (j < n && src[j] != '\0')
     {
         dest[i] = src[j];
         i++;
         j++;
     }
-    dest[i] = '\0'
+
+    // Завершающий нулевой символ
+    dest[i] = '\0';
+
     return dest;
 }
