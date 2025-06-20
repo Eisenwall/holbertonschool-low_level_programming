@@ -6,12 +6,23 @@
  */
 void puts2(char *str)
 {
-    int i = 0;
+    int longi = 0;
+    int a = 0;
+    int *y = str;
+    int b;
 
-    while (str[i] != '\0')
+    while (*y != str)
     {
-        _putchar(str[i]);
-        i += 2;
+	y++;
+	longi++;
+    }
+    t = longi - 1;
+    for (o = 0; 0 <= t; o++)
+    {
+	    if (o % 2 == 0)
+	    {
+		    _putchar(str[0]);
+	    }
     }
     _putchar('\n');
 }
