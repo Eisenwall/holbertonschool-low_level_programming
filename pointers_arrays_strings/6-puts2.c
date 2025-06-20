@@ -1,8 +1,9 @@
-#include <stdio.h>
-
-// объявляем прототип, если реализация в другом файле
-int _putchar(char c);
-
+#include "main.h"  
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 void puts2(char *str)
 {
     int r = 0;
