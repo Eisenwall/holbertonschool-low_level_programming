@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
- * puts_half - prints the second half of a string
- * @str: input string
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 void print_array(int *a, int n)
 {
