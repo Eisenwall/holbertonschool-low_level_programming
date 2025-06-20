@@ -11,7 +11,6 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		/* Проверяем, нужно ли капитализировать текущий символ */
 		if (capitalize_next && (str[i] >= 'a' && str[i] <= 'z'))
 		{
 			str[i] = str[i] - ('a' - 'A');
