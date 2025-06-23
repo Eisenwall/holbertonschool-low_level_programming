@@ -1,17 +1,19 @@
 #include "main.h"
 
 /**
- * print_number - Prints an integer using only _putchar
- * @n: The integer to print
+ * print_number - prints an integer using _putchar
+ * @n: number to print
  */
 void print_number(int n)
 {
-	int pow10 = 1;
-	int num = n;
+	int power = 1;
+	int temp = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
+
+		/* Обход переполнения при n == INT_MIN */
 		if (n == -2147483648)
 		{
 			_putchar('2');
@@ -21,13 +23,12 @@ void print_number(int n)
 			n = -n;
 	}
 
-	while ((num / pow10) >= 10)
-		pow10 *= 10;
+	while ((temp /= 10))
+		power *= 10;
 
-	while (pow10 > 0)
+	while (power > 0)
 	{
-		_putchar('0' + (num / pow10));
-		num %= pow10;
-		pow10 /= 10;
+		_putchar((n / power) % 10 + '0');
+		power /= 10;
 	}
 }
