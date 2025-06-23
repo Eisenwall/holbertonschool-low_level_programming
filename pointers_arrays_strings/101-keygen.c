@@ -14,15 +14,8 @@ int main(void)
 
     srand(time(NULL));
 
-    while (sum < target - 122) // 122 - максимальный ASCII (z)
+    while (sum < target - 122) /* 122 - максимальный ASCII (z) */
     {
-        c = rand() % 78 + 48; // генерируем от '0'(48) до 'z'(122)
+        c = rand() % 78 + 48; /* генерируем от '0'(48) до 'z'(122) */
         sum += c;
-        printf("%c", c);
-    }
-
-    // последний символ, чтобы сумма стала ровно 2772
-    printf("%c", target - sum);
-
-    return 0;
-}
+        printf("%c",
