@@ -11,7 +11,7 @@
 void print_diagsums(int *a, int size)
 {
     int i;
-    unsigned int sum_main = 0, sum_secondary = 0;
+    int sum_main = 0, sum_secondary = 0;
 
     for (i = 0; i < size; i++)
     {
@@ -19,5 +19,5 @@ void print_diagsums(int *a, int size)
         sum_secondary += *(a + i * size + (size - 1 - i));
     }
 
-    printf("%u, %u\n", sum_main, sum_secondary);
+    printf("%d, %d\n", sum_main, sum_secondary);
 }
