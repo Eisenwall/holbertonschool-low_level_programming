@@ -3,28 +3,26 @@
 #include <time.h>
 
 /**
- * main - generates a valid password for 101-crackme
- * Return: Always 0
+ * main - Entry point, generates a valid password for 101-crackme
+ * Return: 0 on success
  */
 int main(void)
 {
-    char key[7];
-    int i, sum = 0;
+    int sum = 0;
+    int target = 2772;
+    char c;
 
     srand(time(NULL));
 
-    /* Генерируем первые 5 символов */
-    for (i = 0; i < 5; i++)
+    while (sum < target - 122) // 122 - максимальный ASCII (z)
     {
-        key[i] = 33 + rand() % 94; /* символы из ASCII от 33 до 126 */
-        sum += key[i];
+        c = rand() % 78 + 48; // генерируем от '0'(48) до 'z'(122)
+        sum += c;
+        printf("%c", c);
     }
 
-    /* 6-й символ так, чтобы сумма всех символов была равна 'sum' по формуле из crackme */
-    key[5] = (sum % 94) + 33;
+    // последний символ, чтобы сумма стала ровно 2772
+    printf("%c", target - sum);
 
-    key[6] = '\0';
-
-    printf("%s\n", key);
-    return (0);
+    return 0;
 }
