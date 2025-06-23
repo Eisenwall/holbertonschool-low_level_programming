@@ -1,5 +1,3 @@
-#include "main.h"
-
 void print_number(int n)
 {
     int power = 1;
@@ -11,7 +9,7 @@ void print_number(int n)
         if (n == -2147483648)
         {
             _putchar('2');
-            n = 147483648;
+            n = 147483648;  // Правильно — именно 147483648 (без ошибок)
         }
         else
         {
@@ -19,7 +17,7 @@ void print_number(int n)
         }
     }
 
-    while ((temp /= 10))
+    while (temp /= 10)
         power *= 10;
 
     while (power > 0)
