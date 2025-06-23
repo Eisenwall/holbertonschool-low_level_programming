@@ -18,7 +18,7 @@ void print_number(int n)
 			n = 147483648;
 		}
 		else
-			n = -n
+			n = -n;
 	}
 
 	while ((num / pow10) >= 10)
