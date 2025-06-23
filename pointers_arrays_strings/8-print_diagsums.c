@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * print_diagsums - prints the sum of the two diagonals of a square matrix
  * @a: pointer to the first element of the matrix (casted from int[][])
@@ -15,8 +13,8 @@ void print_diagsums(int *a, int size)
 
     for (i = 0; i < size; i++)
     {
-        sum_main += *(a + i * size + i);             // элемент главной диагонали
-        sum_secondary += *(a + i * size + (size - 1 - i)); // элемент побочной диагонали
+        sum_main += *(a + i * size + i);
+        sum_secondary += *(a + i * size + (size - 1 - i));
     }
 
     printf("%u, %u\n", sum_main, sum_secondary);
