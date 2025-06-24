@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h> // или используем _putchar
 
 /**
  * _puts_recursion - prints a string, followed by a new line.
@@ -7,12 +6,12 @@
  */
 void _puts_recursion(char *s)
 {
-    if (*s == '\0')        // Базовый случай: если строка закончилась
+    if (*s == '\0')
     {
-        _putchar('\n');    // Печатаем перевод строки
+        _putchar('\n');
         return;
     }
 
-    _putchar(*s);          // Печатаем текущий символ
-    _puts_recursion(s + 1); // Рекурсивно вызываем для следующего символа
+    _putchar(*s);
+    _puts_recursion(s + 1);
 }
