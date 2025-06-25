@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - prints the name of the program
- * @argc: argument count
- * @argv: argument vector
+ * main - Prints the name of the program (with path)
+ * @argc: argument count (unused)
+ * @argv: argument vector (array of strings)
  *
  * Return: Always 0.
  */
