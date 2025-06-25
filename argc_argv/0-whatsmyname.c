@@ -1,4 +1,3 @@
-#include "main.h"
 #include "stdio.h"
 /**
  * wildcmp - сравнивает строки, где s2 может содержать '*'
