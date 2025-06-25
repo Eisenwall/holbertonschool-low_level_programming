@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>  // Необходимо подключить для isdigit
+#include <ctype.h> /* необходимо подключить для isdigit */
 
 /**
  * main - adds positive numbers passed as arguments
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
                 return (1);
             }
         }
-        sum += atoi(argv[i]);  // Здесь была ошибка: было argc[i], нужно argv[i]
+        sum += atoi(argv[i]);
     }
     printf("%d\n", sum);
     return (0);
