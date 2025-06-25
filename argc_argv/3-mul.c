@@ -1,5 +1,7 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+
 /**
  * main - prints the number of arguments passed to the program
  * @argc: argument count
@@ -9,16 +11,19 @@
  */
 int main(int argc, char *argv[])
 {
+	int a, b, res;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	(void)argc;
-	int a = atoi(argv[1]);
-	int b = atoi(argv[2]);
-	int res = a * b;
+
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+	res = a * b;
+
 	printf("%d\n", res);
 	return (0);
 }
-
