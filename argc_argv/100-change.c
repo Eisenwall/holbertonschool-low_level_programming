@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
+/**
  * main - Entry point
  * @argc: Number of command line arguments
  * @argv: Array of arguments
- *
  * Return: 0 on success, 1 on error
  */
 int main(int argc, char *argv[])
