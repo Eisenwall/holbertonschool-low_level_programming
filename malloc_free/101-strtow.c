@@ -25,7 +25,8 @@ int count_words(char *str)
 }
 
 /**
- * extract_word - allocates memory and copies a word from str[start] to str[end - 1]
+ * extract_word - allocates memory and copies a word 
+ * from str[start] to str[end - 1]
  * @str: source string
  * @start: start index
  * @end: end index (exclusive)
