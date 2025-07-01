@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * count_words - counts the number of words in a string
@@ -12,10 +12,8 @@ int count_words(char *str)
 
 	while (str[i] != '\0')
 	{
-		/* Пропускаем пробелы */
 		while (str[i] == ' ' && str[i] != '\0')
 			i++;
-		/* Нашли слово */
 		if (str[i] != ' ' && str[i] != '\0')
 		{
 			count++;
@@ -27,15 +25,38 @@ int count_words(char *str)
 }
 
 /**
+ * extract_word - allocates memory and copies a word from str[start] to str[end - 1]
+ * @str: source string
+ * @start: start index
+ * @end: end index (exclusive)
+ *
+ * Return: pointer to the new word or NULL on failure
+ */
+char *extract_word(char *str, int start, int end)
+{
+	int i;
+	char *word = malloc((end - start + 1) * sizeof(char));
+
+	if (word == NULL)
+		return (NULL);
+
+	for (i = 0; start < end; start++, i++)
+		word[i] = str[start];
+
+	word[i] = '\0';
+	return (word);
+}
+
+/**
  * strtow - splits a string into words
  * @str: the string to split
  *
- * Return: pointer to array of words, or NULL on failure
+ * Return: pointer to array of words, or NULL
  */
 char **strtow(char *str)
 {
 	char **words;
-	int i = 0, j = 0, k, start, end, word_len, wc;
+	int i = 0, j = 0, start, end, wc;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
@@ -50,35 +71,23 @@ char **strtow(char *str)
 
 	while (str[i] != '\0' && j < wc)
 	{
-		/* Пропустить пробелы */
 		while (str[i] == ' ')
 			i++;
 		start = i;
-
 		while (str[i] != ' ' && str[i] != '\0')
 			i++;
 		end = i;
-		word_len = end - start;
 
-		words[j] = malloc((word_len + 1) * sizeof(char));
+		words[j] = extract_word(str, start, end);
 		if (words[j] == NULL)
 		{
-			/* Очистка при ошибке */
 			while (j > 0)
-			{
-				j--;
-				free(words[j]);
-			}
+				free(words[--j]);
 			free(words);
 			return (NULL);
 		}
-
-		for (k = 0; k < word_len; k++)
-			words[j][k] = str[start + k];
-		words[j][k] = '\0';
 		j++;
 	}
 	words[j] = NULL;
-
 	return (words);
 }
