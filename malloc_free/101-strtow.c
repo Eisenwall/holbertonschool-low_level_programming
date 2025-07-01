@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * count_words - counts the number of words in a string
