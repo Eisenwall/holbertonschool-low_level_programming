@@ -1,19 +1,19 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * _realloc - reallocates a memory block using malloc and free
- * @ptr: pointer to old memory block
- * @old_size: size of old memory block in bytes
+ * _realloc - reallocates memory block without using memcpy
+ * @ptr: pointer to old memory
+ * @old_size: old size in bytes
  * @new_size: new size in bytes
  *
- * Return: pointer to new memory block, or NULL on failure or if new_size is 0 and ptr not NULL
+ * Return: pointer to new memory or NULL
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *new_ptr;
-	unsigned int copy_size;
+	unsigned int i;
+	char *new_ptr;
+	char *old_ptr;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -31,9 +31,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_ptr == NULL)
 		return (NULL);
 
-	/* Копируем минимум из old_size и new_size */
-	copy_size = (old_size < new_size) ? old_size : new_size;
-	memcpy(new_ptr, ptr, copy_size);
+	old_ptr = (char *)ptr;
+	for (i = 0; i < old_size && i < new_size; i++)
+		new_ptr[i] = old_ptr[i];
 
 	free(ptr);
 	return (new_ptr);
