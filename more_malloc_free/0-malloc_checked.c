@@ -1,17 +1,20 @@
+#include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
- * malloc_checked - выделяет память с помощью malloc
- * @b: количество байт для выделения
+ * malloc_checked - allocates memory using malloc
+ * @b: number of bytes to allocate
  *
- * Return: указатель на выделенную память
- *         если malloc вернёт NULL — завершить процесс с кодом 98
+ * Return: pointer to allocated memory
+ *         if malloc fails, terminate process with status 98
  */
 void *malloc_checked(unsigned int b)
 {
-    void *ptr = malloc(b);
-    if (ptr == NULL)
-        exit(98);
-    return ptr;
+	void *ptr;
+
+	ptr = malloc(b);
+	if (ptr == NULL)
+		exit(98);
+
+	return (ptr);
 }
