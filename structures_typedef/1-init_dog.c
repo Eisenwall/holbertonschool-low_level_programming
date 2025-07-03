@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stddef.h>  // для NULL
+#include <stddef.h>
 
 /**
  * init_dog - инициализирует структуру dog
