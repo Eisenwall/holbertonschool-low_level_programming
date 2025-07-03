@@ -1,12 +1,12 @@
-#include <stddef.h>
+#include <stdio.h>
 #include "dog.h"
 
-void init_dog(struct dog *d, char *name, float age, char *owner)
+int main(void)
 {
-    if (d == NULL)
-        return;
+    struct dog my_dog;
 
-    d->name = name;
-    d->age = age;
-    d->owner = owner;
+    init_dog(&my_dog, "Ghost", 4.75, "Jon Snow");
+    printf("My name is %s, and I am %.2f\n", my_dog.name, my_dog.age);
+
+    return (0);
 }
