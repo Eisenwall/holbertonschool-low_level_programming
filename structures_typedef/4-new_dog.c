@@ -1,43 +1,78 @@
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
 
 /**
+ * _strlen - returns length of a string
+ * @s: the string
+ *
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (s[len])
+		len++;
+	return (len);
+}
+
+/**
+ * _strcpy - copies a string to a new location
+ * @dest: destination
+ * @src: source
+ *
+ * Return: pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i]; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
  * new_dog - creates a new dog struct
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner's name
- * Return: pointer to new dog, or NULL on failure
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
+ *
+ * Return: pointer to new dog_t, or NULL on failure
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	dog_t *dog;
+	int name_len, owner_len;
 
 	if (!name || !owner)
 		return (NULL);
 
-	d = malloc(sizeof(dog_t));
-	if (!d)
+	dog = malloc(sizeof(dog_t));
+	if (!dog)
 		return (NULL);
 
-	d->name = malloc(strlen(name) + 1);
-	if (!d->name)
+	name_len = _strlen(name);
+	owner_len = _strlen(owner);
+
+	dog->name = malloc(name_len + 1);
+	if (!dog->name)
 	{
-		free(d);
+		free(dog);
+		return (NULL);
+	}
+	dog->owner = malloc(owner_len + 1);
+	if (!dog->owner)
+	{
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
 
-	d->owner = malloc(strlen(owner) + 1);
-	if (!d->owner)
-	{
-		free(d->name);
-		free(d);
-		return (NULL);
-	}
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
+	dog->age = age;
 
-	strcpy(d->name, name);
-	strcpy(d->owner, owner);
-	d->age = age;
-
-	return (d);
+	return (dog);
 }
