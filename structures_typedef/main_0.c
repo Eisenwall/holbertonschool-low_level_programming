@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "dog.h"
 
 int main(void)
@@ -11,5 +10,5 @@ int main(void)
 
     print_dog(&my_dog);
 
-    return (0);
+    return 0;
 }
