@@ -1,19 +1,19 @@
-#ifndef DOG_H
-#define DOG_H
+#include <stddef.h>   // для NULL
+#include "dog.h"
 
 /**
- * struct dog - структура собаки
+ * init_dog - инициализирует структуру dog
+ * @d: указатель на структуру dog
  * @name: имя собаки
  * @age: возраст собаки
  * @owner: владелец собаки
  */
-struct dog
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-    char *name;
-    float age;
-    char *owner;
-};
+    if (d == NULL)
+        return;
 
-void init_dog(struct dog *d, char *name, float age, char *owner);
-
-#endif
+    d->name = name;
+    d->age = age;
+    d->owner = owner;
+}
