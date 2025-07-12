@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * int_index - searches for an integer in an array 
+ * int_index - searches for an integer in an array using a comparison function
  * @array: pointer to the array
  * @size: number of elements in the array
  * @cmp: pointer to the function
