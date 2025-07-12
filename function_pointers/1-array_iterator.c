@@ -1,8 +1,9 @@
-#include <stdio.h>
-#include <stddef.h>
+i#include <stdio.h>
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-    for (int i = 0; i < size; i++)
+    size_t i;
+    for (i = 0; i < size; i++)
     {
         action(array[i]);
     }
