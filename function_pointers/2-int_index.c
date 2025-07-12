@@ -2,10 +2,9 @@
 
 /**
  * int_index - searches for an integer in an array using a comparison function
- * @array: pointer to the array
+ * @array: pointer to the array of integers
  * @size: number of elements in the array
- * @cmp: pointer to the function
- */
+ * @cmp: pointer to the comparison function that returns 0 if no match, non-zero otherwise
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
