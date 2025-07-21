@@ -23,11 +23,11 @@ void print_all(const char * const format, ...)
 			printf("%s", sep);
 			if (format[i] == 'c')
 				printf("%c", va_arg(args, int));
-			else if (format[i] == 'i')
+			if (format[i] == 'i')
 				printf("%d", va_arg(args, int));
-			else if (format[i] == 'f')
+			if (format[i] == 'f')
 				printf("%f", va_arg(args, double));
-			else if (format[i] == 's')
+			if (format[i] == 's')
 			{
 				str = va_arg(args, char *);
 				if (!str)
