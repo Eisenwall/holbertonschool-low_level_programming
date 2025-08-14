@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlid.h>
+#include <stdlib.h>
 /*
 *print_list - prints all the elements
 *@h: pointer to the head of the list
